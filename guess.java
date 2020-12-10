@@ -24,7 +24,7 @@ public class guess {
 			int rand_num = rand.nextInt(100)+1;
 			
 			for(int i = 1; i<=5; i++) {
-				System.out.println(rand_num);
+
 				System.out.print(i+": Enter your guess: ");
 				int guess_num = input.nextInt();
 				
