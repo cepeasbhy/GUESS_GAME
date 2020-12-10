@@ -8,8 +8,8 @@ public class guess {
 		Scanner input = new Scanner(System.in);
 		Random rand = new Random();
 		
-		int game_num = 1, win = 0, loss = 0;
-		double loss_percent = 0, win_percent = 0;
+		double game_num = 1, win = 0, loss = 0;
+		double loss_percent = 0.0, win_percent = 0.0;
 		boolean status = false;
 		
 		System.out.println("GUESSING GAME PROGRAM");
@@ -24,13 +24,14 @@ public class guess {
 			int rand_num = rand.nextInt(100)+1;
 			
 			for(int i = 1; i<=5; i++) {
+				System.out.println(rand_num);
 				System.out.print(i+": Enter your guess: ");
 				int guess_num = input.nextInt();
 				
 				if(guess_num>rand_num) {
 					System.out.println("   - Your guess is too high");
 				}else if(guess_num<rand_num) {
-					System.out.println("   - Your guess is too high");
+					System.out.println("   - Your guess is too low");
 				}else if(guess_num == rand_num) {
 					System.out.println(">> YOU HAVE WON THE GAME!");
 					win++;
@@ -56,19 +57,14 @@ public class guess {
 			}
 		}
 		
-		if(loss == 0) {
-			win_percent = 100;
-		}else if(win == 0) {
-			loss_percent = 100;
-		}else {
-			win_percent  = (win/game_num)*100;
-			loss_percent  = (loss/game_num)*100;
-		}
+		win_percent  = (win/game_num)*100;
+		loss_percent  = (loss/game_num)*100;
+		
 		System.out.println("GAME STATISTICS");
 		System.out.println("---------------");
-		System.out.println("No. of games: "+game_num);
-		System.out.println("No. of win: "+win+" ("+String.format("%.2f", win_percent)+")");
-		System.out.println("No. of win: "+loss+" ("+String.format("%.2f", win_percent)+")");
+		System.out.println("No. of games: "+(int)(game_num));
+		System.out.println("No. of win: "+(int)(win)+" ("+String.format("%.1f", win_percent)+"%)");
+		System.out.println("No. of loss: "+(int)(loss)+" ("+String.format("%.1f", loss_percent)+"%)");
 			
 	}
 
