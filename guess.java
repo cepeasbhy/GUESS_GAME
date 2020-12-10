@@ -8,7 +8,7 @@ public class guess {
 		Scanner input = new Scanner(System.in);
 		Random rand = new Random();
 		
-		int game_num = 0, win = 0, loss = 0;
+		int game_num = 1, win = 0, loss = 0;
 		
 		System.out.println("GUESSING GAME PROGRAM");
 		System.out.println("---------------------");
@@ -25,12 +25,16 @@ public class guess {
 				System.out.print(i+": Enter your guess: ");
 				int guess_num = input.nextInt();
 				
-				if(guess_num == rand_num) {
-					System.out.println("YOU HAVE WON THE GAME!");
+				if(guess_num>rand_num) {
+					System.out.println("   - Your guess is too high");
+				}else if(guess_num<rand_num) {
+					System.out.println("   - Your guess is too high");
+				}else if(guess_num == rand_num) {
+					System.out.println(">> YOU HAVE WON THE GAME!");
 					win++;
 					break;
 				}else {
-					System.out.println("You have loss the game :(");
+					System.out.println(">> You have loss the game :(");
 					System.out.println("The number is: "+rand_num);
 					loss++;
 				}
@@ -40,8 +44,14 @@ public class guess {
 			System.out.println("Do you want to play again[y/n]?: ");
 			char opt  = input.next().charAt(0);
 			
-			
+			if(opt == 'Y' || opt == 'y') {
+				game_num++;
+			}else {
+				break;
+			}
 		}
+		
+		
 			
 	}
 
