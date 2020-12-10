@@ -10,7 +10,7 @@ public class guess {
 		
 		int game_num = 1, win = 0, loss = 0;
 		double loss_percent = 0, win_percent = 0;
-		boolean status;
+		boolean status = false;
 		
 		System.out.println("GUESSING GAME PROGRAM");
 		System.out.println("---------------------");
@@ -66,11 +66,8 @@ public class guess {
 		System.out.println("GAME STATISTICS");
 		System.out.println("---------------");
 		System.out.println("No. of games: "+game_num);
-		System.out.println("No. of win: "+win+" "+String.format("%.2f", win_percent));
-		System.out.println("No. of win: "+loss+" "+String.format("%.2f", win_percent));
-		
-		
-		
+		System.out.println("No. of win: "+win+" ("+String.format("%.2f", win_percent)+")");
+		System.out.println("No. of win: "+loss+" ("+String.format("%.2f", win_percent)+")");
 			
 	}
 
