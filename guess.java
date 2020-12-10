@@ -31,9 +31,16 @@ public class guess {
 					break;
 				}else {
 					System.out.println("You have loss the game :(");
+					System.out.println("The number is: "+rand_num);
 					loss++;
 				}
+				
 			}
+			
+			System.out.println("Do you want to play again[y/n]?: ");
+			char opt  = input.next().charAt(0);
+			
+			
 		}
 			
 	}
