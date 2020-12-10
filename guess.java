@@ -50,6 +50,7 @@ public class guess {
 			
 			if(opt == 'Y' || opt == 'y') {
 				game_num++;
+				status = false;
 			}else {
 				break;
 			}
