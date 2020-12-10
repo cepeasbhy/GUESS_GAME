@@ -28,6 +28,7 @@ public class guess {
 				if(guess_num == rand_num) {
 					System.out.println("YOU HAVE WON THE GAME!");
 					win++;
+					break;
 				}else {
 					System.out.println("You have loss the game :(");
 					loss++;
